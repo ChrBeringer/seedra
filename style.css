@@ -1,0 +1,108 @@
+/* Seedra v1.0 - Custom Styles 
+   Diese Datei ergänzt das Tailwind CSS Framework
+*/
+
+body {
+    background: #0f172a;
+    margin: 0;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Glassmorphism Effekt */
+.glass {
+    background: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Custom Range Slider Styling */
+input[type=range] {
+    height: 12px;
+    background: #334155; /* slate-700 */
+    border-radius: 8px;
+    appearance: none;
+    cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 28px;
+    height: 28px;
+    background: #10b981; /* emerald-500 */
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+input[type=range]::-webkit-slider-thumb:active {
+    transform: scale(1.1);
+}
+
+/* Segmented Control (Längen-Presets S, L, XL) */
+.segmented-control {
+    position: relative;
+    display: flex;
+    background: #020617; /* slate-950 */
+    padding: 4px;
+    border-radius: 1rem;
+    border: 1px solid #1e293b; /* slate-800 */
+    overflow: hidden;
+}
+
+.selection-indicator {
+    position: absolute;
+    top: 4px;
+    bottom: 4px;
+    left: 4px;
+    width: 32%;
+    background: #2563eb; /* blue-600 */
+    border-radius: 0.75rem;
+    transition: all 0.3s ease-out;
+    box-shadow: 0 0 15px rgba(37, 99, 235, 0.4);
+    z-index: 0;
+}
+
+.preset-btn {
+    position: relative;
+    flex: 1;
+    padding: 0.75rem 0;
+    text-align: center;
+    font-size: 0.875rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #64748b; /* slate-500 */
+    transition: color 0.3s ease;
+    z-index: 10;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.preset-btn.active {
+    color: white;
+}
+
+/* Password Display & Security */
+.password-blur {
+    filter: blur(10px);
+    transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+.password-blur:hover {
+    filter: blur(0);
+}
+
+/* Zustand während der Berechnung */
+.generating-active {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+/* Utility für den Farb-Text-Gradienten */
+.text-gradient {
+    background: linear-gradient(to right, #60a5fa, #34d399);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
